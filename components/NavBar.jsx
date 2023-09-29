@@ -1,0 +1,33 @@
+import Link from "next/link";
+
+export default function NavBar() {
+  return (
+    <ul className="flex gap-2">
+      <li>
+        <Link
+          href="/"
+          className="font-orbitron font-bold text-orange-800 hover:underline"
+        >
+          Indie Gamer
+        </Link>
+      </li>
+      <li className="ml-auto">
+        <Link
+          href="/reviews"
+          className="font-orbitron text-orange-800 hover:underline"
+        >
+          Reviews
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="/about"
+          prefetch={false}
+          className="font-orbitron text-orange-800 hover:underline"
+        >
+          About
+        </Link>
+      </li>
+    </ul>
+  );
+}
